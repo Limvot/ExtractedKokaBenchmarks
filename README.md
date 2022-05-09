@@ -7,8 +7,6 @@ and to use Bash to coordinate and Hyperfine to time instead of the Koka based ru
 
 ./test.sh will build and run the benchmarks.
 
-Swift is disabled for now until I can find a version that builds.
-
 I will be adding my research language to the benchmarks as well.
 
 ## Some explanation from a PLDI Readme originally included:

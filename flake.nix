@@ -1,8 +1,8 @@
-
 {
   description = "Env for building Koka bencmarks";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs";
+    #nixpkgs.url = "github:NixOS/nixpkgs";
+    nixpkgs.url = "nixpkgs/nixos-21.11";
     flake-utils.url = "github:numtide/flake-utils";
   };
   outputs = { self, nixpkgs, flake-utils }:
@@ -19,7 +19,7 @@
             koka
             ocaml
             jdk
-            #swift
+            swift
           ];
         };
       }

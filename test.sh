@@ -10,4 +10,4 @@ then
 fi
 
 rm -rf  ./build/CMakeFiles || true
-nix develop -i -c bash -c 'ulimit -s unlimited && find build -type f -executable -print | xargs hyperfine --warmup 2 --export-markdown table.md'
+nix develop -i -c bash -c 'ulimit -s unlimited && find build -type f -executable -print | xargs hyperfine --ignore-failure --warmup 2 --export-markdown table.md'
