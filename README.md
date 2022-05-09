@@ -1,3 +1,16 @@
+# NOTE
+
+These are the benchmarks extracted from the Koka repository https://github.com/koka-lang/koka
+at b1670308f88dd1fc6c22cad28385fcb185d5b27d from the test/bench directory
+and modified by me to run inside a reproducable environment defined by a Nix Flake.
+
+Swift is disabled for now until I can find a version that builds.
+
+I will be adding my research language to the benchmarks as well.
+
+Original README follows:
+
+
 # Build and run benchmarks
 
 This contains the standard benchmark suite (discussed in detail in [Perceus] paper).
