@@ -15,6 +15,6 @@ foreach (source IN LISTS sources)
   add_executable(${name}-exe IMPORTED)
   set_target_properties(${name}-exe PROPERTIES IMPORTED_LOCATION "${CMAKE_CURRENT_BINARY_DIR}/${name}.class")
 
-  add_test(NAME ${name} COMMAND "java" "--enable-preview" ${name} WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+  add_test(NAME ${name} COMMAND "java" "-Xss1024m" "--enable-preview" ${name} WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
   set_tests_properties(${name} PROPERTIES LABELS java)
 endforeach ()

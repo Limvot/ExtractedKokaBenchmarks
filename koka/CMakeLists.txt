@@ -5,12 +5,13 @@ set(sources cfold.kk deriv.kk nqueens.kk nqueens-int.kk
 find_program(kokadev "koka-v2.3.3-dev")
 
 # stack exec koka -- --target=c -O2 -c $(readlink -f ../cfold.kk) -o cfold
-find_program(stack "stack" REQUIRED)
-if(APPLE)
-  set(koka ${stack} --system-ghc --skip-ghc-check exec koka --)
-else()
-  set(koka ${stack} exec koka --)
-endif()
+#find_program(stack "stack" REQUIRED)
+#if(APPLE)
+#  set(koka ${stack} --system-ghc --skip-ghc-check exec koka --)
+#else()
+#  set(koka ${stack} exec koka --)
+#endif()
+set(koka koka)
 
 
 foreach (source IN LISTS sources)

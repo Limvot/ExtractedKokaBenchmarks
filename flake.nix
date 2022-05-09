@@ -12,7 +12,14 @@
         packageName = "Koka benchmarks";
       in {
         devShell = pkgs.mkShell {
-          buildInputs = with pkgs; [ ghc ];
+          buildInputs = with pkgs; [
+            cmake
+            stack (haskellPackages.ghcWithPackages (p: [p.parallel]))
+            koka
+            ocaml
+            jdk
+            #swift
+          ];
         };
       }
     );
