@@ -2,13 +2,38 @@
 
 These are the benchmarks extracted from the Koka repository https://github.com/koka-lang/koka
 at b1670308f88dd1fc6c22cad28385fcb185d5b27d from the test/bench directory
-and modified by me to run inside a reproducable environment defined by a Nix Flake.
+and modified by me to run inside a reproducable environment defined by a Nix Flake,
+and to use Bash to coordinate and Hyperfine to time instead of the Koka based runner.
+
+./test.sh will build and run the benchmarks.
 
 Swift is disabled for now until I can find a version that builds.
 
 I will be adding my research language to the benchmarks as well.
 
-Original README follows:
+## Some explanation from a PLDI Readme originally included:
+
+Available languages are:
+
+- `kk`  : Koka v2.1.1 compiling using gcc 9.3.0.
+- `kkx` : Koka v2.1.1 compiling using gcc 9.3.0 but without reuse optimization (Section 2.4).
+- `ml`  : OCaml v4.08.1 using the optimizing compiler (`ocamlopt`)
+- `hs`  : Haskell GHC 8.6.5.
+- `sw`  : Swift 5.3.3.
+- `jv`  : Java 15.0.2, Java(TM) SE Runtime Environment (build 15.0.2+7-27), 
+          Java HotSpot(TM) 64-Bit Server VM (build 15.0.2+7-27, mixed mode, sharing).
+- `cpp` : GCC 9.3.0, 
+
+Available tests are described in detail in Section 4 and are:
+
+- `rbtree`    : inserts 42 million items into a red-black tree.
+- `rbtree-ck` : a variant of rbtree that keeps a list of every 5th subtree and thus shares many subtrees.
+- `deriv`     : the symbolic derivative of a large expression.
+- `nqueens`   : calculates all solutions for the n-queens problem of size 13 into a list, and returns the length of that list.  
+- `cfold`     : constant-folding over a large symbolic expression.
+
+
+# Original README follows:
 
 
 # Build and run benchmarks

@@ -13,6 +13,7 @@
       in {
         devShell = pkgs.mkShell {
           buildInputs = with pkgs; [
+            hyperfine
             cmake
             stack (haskellPackages.ghcWithPackages (p: [p.parallel]))
             koka
